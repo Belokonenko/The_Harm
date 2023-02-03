@@ -1,16 +1,7 @@
-export default function header() {
-    const link = document.querySelectorAll('.header__link');
-    
-    link.forEach((item, i) => {
-        item.addEventListener('mouseover', () => {
-            aktvateHover(i);
-        })
-    })
+import hover from "./hover.js";
+import search from "./search.js";
 
-    function aktvateHover(index) {
-        link.forEach(link => {
-            link.classList.remove('hover');
-        })
-        link[index].classList.add('hover');
-    }
+export default function header() {
+    hover();
+    search();
 }
