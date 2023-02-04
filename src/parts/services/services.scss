@@ -1,0 +1,50 @@
+.services {
+    text-align: center; 
+    &__tab{
+        display: grid;
+        grid-template-rows: max-content, max-content;
+    }
+    &__list-btn {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding-bottom: 15px;
+        .item-btn {
+            position: relative;
+            width: 100%;
+            padding: 1em 0;
+            background-color: $color-basic-light;
+            border: 3px solid transparent; 
+            &:hover {
+                border: 3px solid $color-main; 
+            }
+            &--active {
+                background-color: $color-main;
+                border: 3px solid $color-main; 
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 45%;
+                    transform: rotate(45deg);
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-main;
+
+                }
+            }
+
+        }
+    }
+    &__list-cards {
+        .card {
+            display: none;
+            grid-template-columns: max-content 1fr;
+            gap: 10px;
+            &--active {
+                display: grid;
+            }
+        }
+    }
+}

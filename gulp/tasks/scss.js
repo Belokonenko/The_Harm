@@ -1,9 +1,9 @@
 import rename from "gulp-rename";
 
 import cleanCss from "gulp-clean-css";//Сжатие css
-import webpcss from "gulp-webpcss";//выводит WEBP
+// import webpcss from "gulp-webpcss";//выводит WEBP
 import autoPrefixer from "gulp-autoprefixer";//вендорные префиксы
-import groupCssMediaQueries from "gulp-group-css-media-queries";//Груперовка медио запросов
+// import groupCssMediaQueries from "gulp-group-css-media-queries";//Груперовка медио запросов
 
 
 import dartSass from "sass";
@@ -22,14 +22,14 @@ export const scss = () => {
             outputStyle: 'expanded'
         }))
         
-        .pipe(groupCssMediaQueries())
+        // .pipe(groupCssMediaQueries())
         
-        .pipe(webpcss( 
-            {
-                webpClass: ".webp",
-                noWebpClass: ".no-webp"
-            }
-        ))
+        // .pipe(webpcss( 
+        //     {
+        //         webpClass: ".webp",
+        //         noWebpClass: ".no-webp"
+        //     }
+        // ))
         .pipe(autoPrefixer(
             {
                 grid: true,
