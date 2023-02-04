@@ -11,6 +11,16 @@ ul {
     max-width: 1180px;;
     margin: 0 auto;
     padding: 0 10px;
+}
 
+.btn {
+    padding: 1.5em;
+    text-transform: uppercase;
+    color: $color-basic-light;
+    background-color: $color-main;
+    border: none;
+    &:hover {
+        background-color: $color-btn-hover;
+    }
 }
 
