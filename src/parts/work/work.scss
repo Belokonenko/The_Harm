@@ -1,0 +1,45 @@
+.work {
+    
+    text-align: center;
+    padding-top: 100px;
+    background-color: $color-bg-gray;
+    &__title {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 40px;
+        margin: 0 0 ;
+        padding: 0 0 20px 0;
+
+    }
+    &__btns {
+        margin: 65px 0 70px 0 ;
+        .work__contanier {
+
+        }
+        .work__btn {
+            padding: 1rem; 
+            margin: 0;
+            font-size: 0.875rem;
+            background-color: transparent;
+            border: 1px solid $color-light-grey;
+            &:hover {
+                border-color: $color-main;
+                color: $color-main;
+            }
+            &:active {
+                background-color: $color-main;
+                color: $color-basic-light;
+            }
+        }
+    }
+    &__grid {
+        // max-width: 1024px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        .grid__img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

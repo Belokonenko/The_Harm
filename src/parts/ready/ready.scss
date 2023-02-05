@@ -1,0 +1,26 @@
+.ready {
+    min-height: 476px;
+    max-width: 1920px;
+    margin: 0 auto ;
+    background: url('../img/ready-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &__container {
+        text-align: center;
+    }
+    &__title {
+            
+        color: $color-main;
+        font-size: 3rem;
+        padding: 100px 0 10px 0;
+    }
+    &__desc {
+        color: $color-light-grey;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+    &__btn {
+
+    }
+}
