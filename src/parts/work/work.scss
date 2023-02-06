@@ -32,14 +32,26 @@
             }
         }
     }
-    &__grid {
-        // max-width: 1024px;
+    .work__list-img {
+        max-width: 1920px;
+        width: 100%;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        .grid__img {
+        // grid-template-columns: repeat(3, 33.333%);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            img {
             display: block;
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
         }
+        
+    }
+    &__btn-load {
+        margin: 70px 0 90px 0;
     }
 }

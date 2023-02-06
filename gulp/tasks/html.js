@@ -1,6 +1,6 @@
 import fileInclude from "gulp-file-include";
-import webpHtmlNosvg from "gulp-webp-html-nosvg";   //  работа с webp добавит к img
-import versionNumber from "gulp-version-number";    //  предотвратить кешироване даннвх на стороне браузра
+// import webpHtmlNosvg from "gulp-webp-html-nosvg";   //  работа с webp добавит к img
+// import versionNumber from "gulp-version-number";    //  предотвратить кешироване даннвх на стороне браузра
 
 
 export const html = () => {
@@ -13,26 +13,26 @@ export const html = () => {
         ))
         .pipe(fileInclude())
     // .pipe(app.plugins.replace(/[*/]img\//g, 'img/')) // изменение путей требует дороботки regexp
-        .pipe(webpHtmlNosvg())
-        .pipe(versionNumber(
+        // .pipe(webpHtmlNosvg())
+        // .pipe(versionNumber(
 
-            {
-                'value' : '%DT%',
+        //     {
+        //         'value' : '%DT%',
 
-                'append' : {
-                    'key' : '_v',
-                    'cover' : 0,
-                    'to' : [
+        //         'append' : {
+        //             'key' : '_v',
+        //             'cover' : 0,
+        //             'to' : [
 
-                        'css',
-                        'js',
-                    ]
-                },
-                    'output' : {
-                        'file' : 'gulp/version.json'
-                }
-            })
-        )
+        //                 'css',
+        //                 'js',
+        //             ]
+        //         },
+        //             'output' : {
+        //                 'file' : 'gulp/version.json'
+        //         }
+        //     })
+        // )
         
         .pipe(app.gulp.dest(app.path.build.html))
         .pipe(app.plugins.browserSync.stream())
