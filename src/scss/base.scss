@@ -24,9 +24,14 @@ ul {
     background-color: $color-main;
     border: none;
     &:hover {
-        background-color: $color-btn-hover;
+        box-shadow: 0px -5px 5px white;
+    }
+    &:active {
+        box-shadow: none;
+        background-color: $color-btn-active;
     }
 }
+
 
 .dec-line {
     position: relative;
@@ -52,4 +57,5 @@ ul {
         background-color: $color-main;
     }
 }
+
 
