@@ -13,8 +13,9 @@ export default function work() {
 
         for (let index = 0; index < 12; index++) {
             const li = document.createElement('li')
+            
             li.classList.add('work__list-img-item');
-
+            li.classList.add('faded');
 
             li.innerHTML = `
         <img src="./img/work-${index}.jpg" alt="" class="grid__img">
@@ -29,7 +30,7 @@ export default function work() {
          
 
         div.innerHTML =  `
-                <div class="work__block" >
+                <div class="work__block  faded" >
                     <div class="btns-block">
                         <button class="work-btn btn-chein">
                             <svg widhth="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

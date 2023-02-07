@@ -103,5 +103,20 @@
             }
         }
     }
+
+.faded {
+  animation-name: faded;
+  animation-duration: 1.5s;
+
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 }
 
