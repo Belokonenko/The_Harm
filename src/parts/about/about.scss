@@ -1,0 +1,38 @@
+.about {
+    min-height:1039px ;
+    background-image: url('../img/about-bg.jpg'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.25rem;
+        line-height: 40px;
+        color: $color-basic-light;
+    }
+    &__comma {
+        background-image: url('../img/comma.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-sizing: content;
+        width: 44px;
+        height: 31px;
+    }
+    &__desc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #fff;
+    }
+}

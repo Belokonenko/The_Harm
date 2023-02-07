@@ -1,0 +1,15 @@
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 121px;
+    background-color: $color-main-dark;
+    &__text {
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 26px;
+    color: #AEAEAE;
+    }
+}
