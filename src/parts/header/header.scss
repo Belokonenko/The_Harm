@@ -17,7 +17,7 @@
     min-height: 100%;
     display: flex;
     justify-content: end;
-    align-items: stretch
+    align-items: stretch;
 }
 
 .header__nav-list {
@@ -83,6 +83,7 @@
         border: none;
         outline: none;
         background-color: transparent;
+
     }
 }
 .search-active {

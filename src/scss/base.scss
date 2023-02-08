@@ -23,6 +23,7 @@ ul {
     color: $color-basic-light;
     background-color: $color-main;
     border: none;
+    transition: all 0.3s;
     &:hover {
         box-shadow: 0px -5px 5px white;
     }

@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-
+    
     &__container {
         display: flex;
         flex-direction: column;
@@ -20,6 +20,7 @@
         line-height: 40px;
         color: $color-basic-light;
     }
+    
     &__comma {
         background-image: url('../img/comma.png');
         background-repeat: no-repeat;
@@ -28,6 +29,7 @@
         width: 44px;
         height: 31px;
     }
+    
     &__desc {
         font-style: normal;
         font-weight: 300;
