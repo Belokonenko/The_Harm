@@ -82,25 +82,25 @@
                 justify-content: center;
             }
             .wrap-list {
-                border: 5px solid blue;
                 width: 648px;
                 overflow: hidden;
             }
             &-list {
                 position: relative;
                 display: flex;
-                align-items: center;
+                align-items: stretch;
                 height: 150px;
                 transition: all, 0.3s;
                 .slide-item {
+                    display: flex;
+                    align-items: center;
                     padding: 0 40px;
-                    border: 1px solid gold;
                 }
                 .photo-min {
+                    position: relative;
                     background-color: blue;
                     width: 80px;
                     height: 80px;
-                    border: 5px solid rgba(31, 218, 181, .2);
                 }
             }
         }
