@@ -76,17 +76,22 @@
                 }
 
             }
+            .block-btn-slider {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             .wrap-list {
                 border: 5px solid blue;
                 width: 648px;
                 overflow: hidden;
-                margin: 0 auto;
             }
             &-list {
                 position: relative;
                 display: flex;
                 align-items: center;
                 height: 150px;
+                transition: all, 0.3s;
                 .slide-item {
                     padding: 0 40px;
                     border: 1px solid gold;
