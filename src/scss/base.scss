@@ -37,25 +37,22 @@ ul {
 .dec-line {
     position: relative;
     width: 80px;
-    height: 5px;
     margin: 0 auto;
     &::before {
         position: absolute;
-        top: 0;
+        top: -3px;
         left: -5px;
         content: '';
         width: 80px;
-        height: 2px;
-        background-color: $color-main;
+        border-bottom: 2px solid $color-main;
     }
     &::after {
         position: absolute;
-        bottom: 0;
+        bottom: -3px;
         right: -5px;
         content: '';
         width: 80px;
-        height: 2px;
-        background-color: $color-main;
+        border-bottom: 2px solid $color-main;
     }
 }
 
