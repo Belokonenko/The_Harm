@@ -35,16 +35,21 @@
         height: 31px;
     }
     
-    &__desc {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1rem;
-        line-height: 30px;
-        color: #fff;
-    }
 
     &__slaider {
         &-card {
+
+            &-desc {
+                max-width: 1116px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1rem;
+                line-height: 30px;
+                color: #fff;
+                margin: 0 auto;
+
+            }
+            
             &-name {
                 font-style: normal;
                 font-weight: 700;
