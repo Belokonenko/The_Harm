@@ -31,6 +31,7 @@
                     width: 30px;
                     height: 30px;
                     background-color: $color-main;
+                    z-index: -10;
 
                 }
             }
@@ -44,6 +45,11 @@
             gap: 10px;
             &--active {
                 display: grid;
+            }
+            & img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
             }
         }
     }
