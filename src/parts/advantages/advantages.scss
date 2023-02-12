@@ -1,14 +1,18 @@
 
 .advantages {
     &__list {
-            display: grid;
-            grid-template-columns: repeat(4, 25%);
-        li {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            min-height: 380px;
-            background-color: $color-main-dark;
-                color: $color-main;
+            display: flex;
+            li {
+                flex: 1 1 auto;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                min-height: 380px;
+                background-color: $color-main-dark;
+                color:$color-main;
+                width: 25%;
+                &:hover {
+                    width: 35%;
+                }
             svg {
                 align-self: end;
                 justify-self: center;
