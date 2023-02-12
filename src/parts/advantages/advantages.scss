@@ -10,6 +10,7 @@
                 background-color: $color-main-dark;
                 color:$color-main;
                 width: 25%;
+                transition: all .9s;
                 &:hover {
                     width: 35%;
                 }
