@@ -50,6 +50,7 @@ export default function work() {
         element.addEventListener('mouseenter', () => {
             console.log('mouseenter')
                     element.append(div);
+
         })
 
         element.addEventListener('mouseleave', () => {
