@@ -48,13 +48,11 @@ export default function work() {
                 </div>
             `;
         element.addEventListener('mouseenter', () => {
-            console.log('mouseenter')
                     element.append(div);
 
         })
 
         element.addEventListener('mouseleave', () => {
-            console.log('mouseleave')
                 div.remove();
         })
     }

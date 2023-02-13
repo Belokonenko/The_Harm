@@ -38,7 +38,7 @@
     &__slaider {
         &-wrap {
             max-width: 700px;
-            // overflow: hidden;
+            overflow: hidden;
             margin: 0 auto;
         }
 
@@ -118,7 +118,6 @@
             justify-content: center;
             transition: all, 0.3s;
             height: 120px;
-            border: 1px solid red;
         }
         .item-min-photo {
             width: 80px;
