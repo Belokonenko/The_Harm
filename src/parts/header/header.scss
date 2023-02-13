@@ -16,7 +16,6 @@
     justify-self: center;
     width: 30px;
     height: 30px;
-    border: 1px solid red;
     .span-burger {
     }
 }
@@ -115,12 +114,25 @@
     .header__nav {
         position: absolute;
         left: -200%;
+        top: 100%;
+    }
+    .header__nav-list {
+        flex-direction: column;
+        background-color: rgba(94, 93, 88, 0.6);
+
+        .header__link {
+            padding: 0.5rem;
+        }
+    }
+    .header__nav--active {
+        left: 0;
     }
     .header__btn-burger {
         position: relative;
         display: block;
         overflow: hidden;
         order: 0;
+        transition: all 0.9s;
         span {
             display: block;
             position: absolute;
@@ -146,12 +158,12 @@
                 }
                 &:nth-of-type(2) {
                     top: 50%;
-                    transform:translateY(-50%) rotate(45deg);
+                    transform: translateY(-50%) rotate(45deg);
                 }
 
                 &:nth-of-type(3) {
                     top: 50%;
-                    transform:translateY(-50%) rotate(-45deg);
+                    transform: translateY(-50%) rotate(-45deg);
                 }
             }
         }
@@ -164,10 +176,3 @@
 }
 @media (max-width: 1400px) {
 }
-
-// X-Small	None	<576px
-// Small	sm	≥576px
-// Medium	md	≥768px
-// Large	lg	≥992px
-// Extra large	xl	≥1200px
-// Extra extra large	xxl	≥1400px
