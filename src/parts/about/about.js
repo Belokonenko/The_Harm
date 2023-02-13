@@ -10,44 +10,49 @@ export default function about() {
 
     let offsetSize = slideItems[0].getBoundingClientRect().width;
     let offset = 0;
-    let sizeVewline = siideItemsCount * offsetSize;
 
-    btnNext.addEventListener("click", () => {
-        offset -= offsetSize;
-        console.log(offset);
-
-        if (offset <= -sizeVewline) {
-            offset = 0;
-        }
-        slideLine.style.left = `${offset}px`;
-    });
-
-    btnPre.addEventListener("click", () => {
-        offset += offsetSize;
-        console.log(offset);
-        if (offset > 0) {
-            offset = -(sizeVewline - offsetSize);
-        }
-
-        slideLine.style.left = `${offset}px`;
-    });
+    let countCard = 0;
 
     activeSlide();
     
+    btnNext.addEventListener("click", () => {
+        countCard++;
+
+        if (countCard >= siideItemsCount) {
+            countCard = 0;
+        }
+
+        activeSlide(countCard);
+        
+        slideLine.style.left = `-${offsetSize * countCard}px`;
+    });
+
+    btnPre.addEventListener("click", () => {
+        countCard--;
+        
+        if (countCard < 0) {
+            countCard = siideItemsCount - 1;
+        }
+
+        activeSlide(countCard);
+        
+        slideLine.style.left = `-${offsetSize * countCard}px`;
+    });
+
+
     itemsMinPhoto.forEach((item, i) => {
-        item.addEventListener('click', () => {
-            console.log(i);
+        item.addEventListener("click", () => {
             activeSlide(i);
-        })
-    })
+        });
+    });
 
     function activeSlide(index = 0) {
         itemsMinPhoto.forEach((item) => {
-            item.classList.remove('item-min-photo--active');
-        })
+            item.classList.remove("item-min-photo--active");
+        });
 
-        itemsMinPhoto[index].classList.add('item-min-photo--active');
-        
+        itemsMinPhoto[index].classList.add("item-min-photo--active");
+
         offset = -(offsetSize * index);
         slideLine.style.left = `${offset}px`;
     }
