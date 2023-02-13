@@ -23,22 +23,21 @@ export default function about() {
         }
 
         activeSlide(countCard);
-        
+
         slideLine.style.left = `-${offsetSize * countCard}px`;
     });
 
     btnPre.addEventListener("click", () => {
         countCard--;
-        
+
         if (countCard < 0) {
             countCard = siideItemsCount - 1;
         }
 
         activeSlide(countCard);
-        
+
         slideLine.style.left = `-${offsetSize * countCard}px`;
     });
-
 
     itemsMinPhoto.forEach((item, i) => {
         item.addEventListener("click", () => {
