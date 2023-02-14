@@ -11,7 +11,7 @@ export default function gallery() {
         for (let index = 0; index < 8; index++) {
             const item = document.createElement('li')
             item.innerHTML =`
-            <li class="item"><img src="../img/gallery-${index}.jpg" alt=""></li>
+            <li class="item"><img src="./img/gallery-${index}.jpg" alt=""></li>
         `;
             galleryImages.append(item);
         }    
