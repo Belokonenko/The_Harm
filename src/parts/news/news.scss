@@ -12,7 +12,7 @@
     }
     &__list {
         display: grid;
-        grid-template-columns: repeat(4, 1fr) ;
+        grid-template-columns: repeat(4, 1fr);
         gap: 30px;
         .news-item {
             .wrap-img {
@@ -21,7 +21,6 @@
                     display: block;
                     width: 100%;
                     height: auto;
-
                 }
                 .news-date-block {
                     position: absolute;
@@ -44,7 +43,6 @@
                         padding: 0;
                     }
                 }
-                
             }
             .title-news {
                 font-style: normal;
@@ -56,4 +54,25 @@
         }
     }
 
+    @media (max-width: 320px) {
+    }
+    @media (max-width: 576px) {
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    @media ((min-width: 577px) and  (max-width: 768px)) {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media ((min-width: 769px) and  (max-width: 992px)) {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 1400px) {
+    }
 }

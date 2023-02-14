@@ -1,6 +1,6 @@
 .services {
-    text-align: center; 
-    &__tab{
+    text-align: center;
+    &__tab {
         display: grid;
         grid-template-rows: max-content, max-content;
     }
@@ -13,16 +13,16 @@
             width: 100%;
             padding: 1em 0;
             background-color: $color-basic-light;
-            border: 3px solid transparent; 
+            border: 3px solid transparent;
             &:hover {
-                border: 3px solid $color-main; 
+                border: 3px solid $color-main;
             }
             &--active {
                 background-color: $color-main;
-                border: 3px solid $color-main; 
+                border: 3px solid $color-main;
 
                 &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     bottom: -10px;
                     left: 45%;
@@ -32,10 +32,8 @@
                     height: 30px;
                     background-color: $color-main;
                     z-index: -10;
-
                 }
             }
-
         }
     }
     &__list-cards {
@@ -52,5 +50,40 @@
                 object-fit: cover;
             }
         }
+    }
+
+    @media (max-width: 320px) {
+    }
+    @media (max-width: 576px) {
+    }
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 992px) {
+        &__list-btn {
+            grid-template-columns: 1fr; 
+            grid-template-rows: repeat(6, 1fr);
+            padding-bottom: 15px;
+
+        }
+        &__list-cards {
+            .card {
+                display: none;
+                grid-template-columns: 1fr;
+                gap: 10px;
+                &--active {
+                    display: grid;
+                }
+                & img {
+                    margin: 0 auto;
+                    width: 300px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 1400px) {
     }
 }

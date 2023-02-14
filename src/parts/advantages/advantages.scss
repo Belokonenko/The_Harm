@@ -1,23 +1,23 @@
-
 .advantages {
     &__list {
-            display: flex;
-            li {
-                flex: 1 1 auto;
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                min-height: 380px;
-                background-color: $color-main-dark;
-                color:$color-main;
-                width: 25%;
-                transition: all .9s;
-                &:hover {
-                    width: 30%;
-                }
+        display: flex;
+        li {
+            flex: 1 1 auto;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            min-height: 380px;
+            background-color: $color-main-dark;
+            color: $color-main;
+            width: 25%;
+            transition: all 0.9s;
+            border-bottom: 2;
+            &:hover {
+                width: 30%;
+            }
             svg {
                 align-self: end;
                 justify-self: center;
-            }     
+            }
             span {
                 font-size: 1.25rem;
                 font-weight: 700;
@@ -31,5 +31,43 @@
                 color: $color-basic-light;
             }
         }
+    }
+
+    @media (max-width: 320px) {
+    }
+    @media (max-width: 576px) {
+    }
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 992px) {
+        &__list {
+            flex-direction: column;
+            & li {
+                display: grid;
+                grid-template-columns: 130px 1fr;
+                grid-template-rows: 1fr;
+                min-height: 130px;
+                width: 100%;
+                
+                &:hover {
+                    width: 100%;
+                    min-height: 150px;
+                }
+                svg {
+                    justify-content: center;
+                    align-self: center;
+                    
+                }
+                span {
+                    justify-content: center;
+                    align-self: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 1400px) {
     }
 }
