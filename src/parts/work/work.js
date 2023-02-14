@@ -1,35 +1,33 @@
 export default function work() {
-    const btnAddImg = document.querySelector('.work__btn-load');
+    const btnAddImg = document.querySelector(".work__btn-load");
 
     addImgWork();
-    
-    btnAddImg.addEventListener('click', () => {
-        addImgWork();
-    })
 
+    btnAddImg.addEventListener("click", () => {
+        addImgWork();
+    });
 
     function addImgWork() {
-        const workListImg = document.querySelector('.work__list-img')
+        const workListImg = document.querySelector(".work__list-img");
 
         for (let index = 0; index < 12; index++) {
-            const li = document.createElement('li')
-            
-            li.classList.add('work__list-img-item');
-            li.classList.add('faded');
+            const li = document.createElement("li");
+
+            li.classList.add("work__list-img-item");
+            li.classList.add("faded");
 
             li.innerHTML = `
         <img src="./img/work-${index}.jpg" alt="" class="grid__img">
-        `
+        `;
             addCreateWindow(li);
             workListImg.append(li);
         }
     }
 
     function addCreateWindow(element) {
-        const div = document.createElement('div');
-         
+        const div = document.createElement("div");
 
-        div.innerHTML =  `
+        div.innerHTML = `
                 <div class="work__block  faded" >
                     <div class="btns-block">
                         <button class="work-btn btn-chein">
@@ -47,13 +45,12 @@ export default function work() {
 
                 </div>
             `;
-        element.addEventListener('mouseenter', () => {
-                    element.append(div);
+        element.addEventListener("mouseenter", () => {
+            element.append(div);
+        });
 
-        })
-
-        element.addEventListener('mouseleave', () => {
-                div.remove();
-        })
+        element.addEventListener("mouseleave", () => {
+            div.remove();
+        });
     }
 }

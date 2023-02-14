@@ -138,9 +138,48 @@
         }
     }
 
-    @media only screen and (max-width: 320px) {
+
+    @media (max-width: 1400px) {
     }
-    @media only screen and (min-width: 100px) and (max-width: 576px) {
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 992px) {
+        &__slaider {
+            &-wrap {
+                max-width: 800px;
+            }
+            &-line {
+                &-item {
+                    flex: 0 0 800px;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        &__slaider {
+            &-wrap {
+                max-width: 700px;
+            }
+            &-line {
+                &-item {
+                    flex: 0 0 700px;
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        &__slaider {
+            &-wrap {
+                max-width: 550px;
+            }
+            &-line {
+                &-item {
+                    flex: 0 0 550px;
+                }
+            }
+        }
+    }
+    @media (max-width: 320px) {
         &__slaider {
             &-wrap {
                 max-width: 310px;
@@ -161,46 +200,5 @@
                 margin: 4px;
             }
         }
-    }
-    @media only screen and (min-width: 577px) and (max-width: 768px) {
-        &__slaider {
-            &-wrap {
-                max-width: 550px;
-            }
-            &-line {
-                &-item {
-                    flex: 0 0 550px;
-                }
-            }
-        }
-    }
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-        &__slaider {
-            &-wrap {
-                max-width: 700px;
-            }
-            &-line {
-                &-item {
-                    flex: 0 0 700px;
-                }
-            }
-        }
-    }
-    @media only screen and (min-width: 993px) and (max-width: 1200px) {
-        &__slaider {
-            &-wrap {
-                max-width: 800px;
-            }
-            &-line {
-                &-item {
-                    flex: 0 0 800px;
-                }
-            }
-        }
-    }
-
-    @media only screen and (min-width: 1201px) and (max-width: 1400px) {
-    }
-    @media only screen and (min-width: 1401px) {
     }
 }
