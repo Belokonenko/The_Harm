@@ -8,14 +8,36 @@ export default function about() {
 
     const itemsMinPhoto = document.querySelectorAll(".item-min-photo");
 
-    let offsetSize = slideItems[0].getBoundingClientRect().width;
+    let offsetSize = 0;
     let offset = 0;
-
     let countCard = 0;
 
-    activeSlide();
+    const viewPort = document.querySelector(".about__slaider-wrap");
+
+    const setParam = () => {
+        let arrItems = Array.from(slideItems);
+        let numItems = arrItems.length;
+        let widthViewPort = viewPort.getBoundingClientRect().width;
+        
+        slideLine.style.width = `${widthViewPort * numItems}px`;
+        
+        arrItems.forEach(item => {
+            item.style.width = `${widthViewPort}px`;
+        })
+
+        offsetSize =  widthViewPort;
+        
+        slideLine.style.left = `-${offsetSize * countCard}px`;
+    };
+
+    setParam();
     
+    window.addEventListener('resize', setParam);
+
+    activeSlide();
+
     btnNext.addEventListener("click", () => {
+        
         countCard++;
 
         if (countCard >= siideItemsCount) {
