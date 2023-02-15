@@ -50,12 +50,16 @@
             &-item {
                 flex: 0 0 1000px;
                 .desc {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     font-style: normal;
                     font-weight: 300;
                     font-size: 1rem;
                     line-height: 30px;
                     color: #fff;
                     margin: 0 auto;
+                    height: 100px;
                 }
                 .name {
                     font-style: normal;
@@ -138,7 +142,6 @@
         }
     }
 
-
     @media (max-width: 1400px) {
     }
     @media (max-width: 1200px) {
@@ -146,31 +149,22 @@
     @media (max-width: 992px) {
         &__slaider {
             &-wrap {
-                max-width: 800px;
+                width: 750px;
             }
             &-line {
                 &-item {
-                    flex: 0 0 800px;
+                    flex: 0 0 750px;
                 }
             }
         }
     }
     @media (max-width: 768px) {
-        &__slaider {
-            &-wrap {
-                max-width: 700px;
-            }
-            &-line {
-                &-item {
-                    flex: 0 0 700px;
-                }
-            }
+        .desc  {
+            height: 150px;
         }
-    }
-    @media (max-width: 576px) {
         &__slaider {
             &-wrap {
-                max-width: 550px;
+                width: 550px;
             }
             &-line {
                 &-item {
@@ -179,10 +173,42 @@
             }
         }
     }
+    @media (max-width: 576px) {
+        .about__title {
+            margin: 10px 0;
+        }
+        .about__dec-line {
+            margin: 10px;
+        }
+
+        .desc  {
+            height: 250px;
+        }
+        &__slaider {
+            &-wrap {
+                width: 310px;
+            }
+            &-line {
+                &-item {
+                    flex: 0 0 310px;
+                }
+            }
+        }
+
+        .item-min-photo {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(31, 218, 181, 0.2);
+            border-radius: 50%;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 4px;
+        }
+    }
     @media (max-width: 320px) {
         &__slaider {
             &-wrap {
-                max-width: 310px;
+                width: 310px;
             }
             &-line {
                 &-item {
