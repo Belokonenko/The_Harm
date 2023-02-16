@@ -16,8 +16,6 @@
     justify-self: center;
     width: 30px;
     height: 30px;
-    .span-burger {
-    }
 }
 .header__nav {
     min-height: 100%;
@@ -126,8 +124,8 @@
         left: 0;
     }
     .header__btn-burger {
-        position: relative;
         display: block;
+        position: relative;
         overflow: hidden;
         order: 0;
         transition: all 0.9s;
