@@ -1,10 +1,13 @@
 export default function search() {
     const btn = document.querySelector('.btn-search');
-    const inputSearch = document.querySelector('.header__form');
-
+    const formSearch = document.querySelector('.header__form');
+    const inputSearch  = document.querySelector('.input-search'); 
     btn.addEventListener('click', () => {
-        inputSearch.classList.toggle('search-active')
+        formSearch.classList.toggle('search-active')
+        inputSearch.value = '';
+        
     })
+    
     document.addEventListener('keydown', (e) => { 
         if (e.code == 'Escape')  {
             inputSearch.classList.remove('search-active')
